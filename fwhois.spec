@@ -1,7 +1,7 @@
 Summary:	A finger-style whois program.
 Name:		fwhois
 Version:	1.00
-Release:	12
+Release:	13
 Copyright:	BSD
 Group:		Applications/Internet
 Source:		ftp://sunsite.unc.edu/pub/Linux/distributions/slackware/source/n/tcpip/fwhois-1.00.tar.gz
@@ -28,7 +28,6 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
 
 install -s fwhois $RPM_BUILD_ROOT/%{_bindir}/fwhois
-ln -sf fwhois $RPM_BUILD_ROOT/%{_bindir}/whois
 
 gzip -9nf README
 
@@ -39,4 +38,3 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README.gz
 %attr(755,root,root) %{_bindir}/fwhois
-%attr(755,root,root) %{_bindir}/whois
