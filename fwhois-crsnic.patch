@@ -1,0 +1,23 @@
+--- fwhois-1.00/fwhois.c	Sun Jul 25 20:34:15 1993
++++ fwhois-1.00/fwhois.c	Fri Feb  4 21:42:55 2000
+@@ -67,9 +67,9 @@
+ 	
+ 	if (argc == 2) {
+ 		eleet = argv[1];
+-		/* If no host specified, use whois.internic.net */
++		/* If no host specified, use whois.crsnic.net */
+ 		if(!index(argv[1],'@')) {
+-			stuff = strcat(eleet,"@whois.internic.net");
++			stuff = strcat(eleet,"@whois.crsnic.net");
+ 			eleet = stuff;
+ 			}
+ 		}
+@@ -96,7 +96,7 @@
+ 
+ 	if (!(host = rindex(name, '@')))
+ 		return;
+-	*host++ = NULL;
++	*host++ = '\0';
+ 	if (!(hp = gethostbyname(host))) {
+ 		defaddr.s_addr = inet_addr(host);
+ 		if (defaddr.s_addr == -1) {

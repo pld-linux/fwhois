@@ -1,0 +1,15 @@
+--- fwhois-1.00/fwhois.c	Fri Feb  4 21:42:55 2000
++++ fwhois-1.00/fwhois.c	Fri Feb  4 21:48:03 2000
+@@ -113,8 +113,10 @@
+ 		hp = &def;
+ 	}
+ 	if (!(sp = getservbyname("whois", "tcp"))) {
+-		(void)fprintf(stderr, "fwhois: tcp/whois: unknown service\n");
+-		return;
++		if (!(sp = getservbyname("nicname", "tcp"))) {
++			(void)fprintf(stderr, "fwhois: tcp/whois and tcp/nicname: unknown services\n");
++			return;
++		}
+ 	}
+ 	sin.sin_family = hp->h_addrtype;
+ 	bcopy(hp->h_addr, (char *)&sin.sin_addr, hp->h_length);
