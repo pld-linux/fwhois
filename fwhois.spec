@@ -5,7 +5,7 @@ Summary(pl):	Program do odpytywania bazy whois podobny w obs³udze do fingera
 Summary(tr):	finger tarzý whois
 Name:		fwhois
 Version:	1.00
-Release:	13
+Release:	14
 License:	BSD
 Group:		Applications/Networking
 Group(de):	Applikationen/Netzwerkwesen
