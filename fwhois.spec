@@ -8,7 +8,7 @@ Summary(pt_BR):	Whois parecido com saída do finger
 Summary(tr):	finger tarzý whois
 Name:		fwhois
 Version:	1.00
-Release:	14
+Release:	15
 License:	BSD
 Group:		Applications/Networking
 Source0:	ftp://sunsite.unc.edu/pub/Linux/distributions/slackware/source/n/tcpip/%{name}-%{version}.tar.gz
@@ -81,12 +81,10 @@ install -d $RPM_BUILD_ROOT%{_bindir}
 
 install fwhois $RPM_BUILD_ROOT/%{_bindir}/fwhois
 
-gzip -9nf README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README
 %attr(755,root,root) %{_bindir}/fwhois
