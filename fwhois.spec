@@ -11,8 +11,6 @@ Version:	1.00
 Release:	14
 License:	BSD
 Group:		Applications/Networking
-Group(de):	Applikationen/Netzwerkwesen
-Group(pl):	Aplikacje/Sieciowe
 Source0:	ftp://sunsite.unc.edu/pub/Linux/distributions/slackware/source/n/tcpip/%{name}-%{version}.tar.gz
 Patch0:		%{name}-nicname.patch
 Patch1:		%{name}-crsnic.patch
