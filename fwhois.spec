@@ -7,6 +7,7 @@ Version:	1.00
 Release:	13
 License:	BSD
 Group:		Applications/Networking
+Group(de):	Applikationen/Netzwerkwesen
 Group(pl):	Aplikacje/Sieciowe
 Source0:	ftp://sunsite.unc.edu/pub/Linux/distributions/slackware/source/n/tcpip/%{name}-%{version}.tar.gz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -48,13 +49,13 @@ hakkýnda bilgi edinebilirsiniz.
 %setup -q
 
 %build
-gcc $RPM_OPT_FLAGS -s fwhois.c -o fwhois
+%{__cc} %{rpmcflags} %{rpmldflags} fwhois.c -o fwhois
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
 
-install -s fwhois $RPM_BUILD_ROOT/%{_bindir}/fwhois
+install fwhois $RPM_BUILD_ROOT/%{_bindir}/fwhois
 
 gzip -9nf README
 
