@@ -9,7 +9,7 @@ Copyright:	BSD
 Group:		Applications/Networking
 Group(pl):	Aplikacje/Sieciowe
 Source:		ftp://sunsite.unc.edu/pub/Linux/distributions/slackware/source/n/tcpip/fwhois-1.00.tar.gz
-Buildroot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The fwhois program is a different style of the whois program. Both
