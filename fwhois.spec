@@ -1,7 +1,10 @@
 Summary:	A finger-style whois program
 Summary(de):	Finger-artiges whois
+Summary(es):	Whois parecido con salida del finger
 Summary(fr):	Un whois dans le style finger
+Summary(ja):	finger ¥¹¥¿¥¤¥ë¤Î whois ¥×¥í¥°¥é¥à
 Summary(pl):	Program do odpytywania bazy whois podobny w obs³udze do fingera
+Summary(pt_BR):	Whois parecido com saída do finger
 Summary(tr):	finger tarzý whois
 Name:		fwhois
 Version:	1.00
@@ -11,6 +14,8 @@ Group:		Applications/Networking
 Group(de):	Applikationen/Netzwerkwesen
 Group(pl):	Aplikacje/Sieciowe
 Source0:	ftp://sunsite.unc.edu/pub/Linux/distributions/slackware/source/n/tcpip/%{name}-%{version}.tar.gz
+Patch0:		%{name}-nicname.patch
+Patch1:		%{name}-crsnic.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -23,6 +28,29 @@ Install fwhois if you or your system's users need a program for
 querying whois databases. You may also want to install whois, and then
 decide for yourself which program you prefer.
 
+%description -l de
+Dies ist das 'WHOIS'-Programm. Es gestattet Ihnen, in den
+Whois-Datenbanken rund um die Welt nach Personen zu suchen.
+
+%description -l es
+Este es el programa "whois". Permite encontrar información sobre
+Personas, almacenadas en los bancos de datos "whois" de todo el mundo.
+
+%description -l fr
+Programme « whois ». Il vous permet d'obtenir des informations sur les
+personnes répertoriées dans les bases de données whois de part le
+monde.
+
+%description -l ja
+fwhois ¥×¥í¥°¥é¥à¤Ï whois ¥×¥í¥°¥é¥à¤ÎÊÌ¤Î¥¹¥¿¥¤¥ë¤Î¤â¤Î¤Ç¤¢¤ë¡£
+fwhois ¤È whois ¤ÎÎ¾Êý¤È¤â¥·¥¹¥Æ¥à¥æ¡¼¥¶¤Ë¤Ä¤¤¤Æ¤Î¾ðÊó¤òÃµ¤¹¤¿¤á¤Î
+Internet whois ¥Ç¡¼¥¿¥Ù¡¼¥¹¤Ë¿Ò¤Í¤ë¡£fwhois ¤Ï whois ¤è¤ê¤â¾®¤µ¤¯¤Æ¤è¤ê
+¥³¥ó¥Ñ¥¯¥È¤Ç°ã¤Ã¤¿ÊýË¡¤Ç¼Â¹Ô¤¹¤ë¡£
+
+¤â¤·¤¢¤Ê¤¿¤¬¥·¥¹¥Æ¥à¥æ¡¼¥¶¤Ç whois ¥Ç¡¼¥¿¥Ù¡¼¥¹¤Ë¿Ò¤Í¤ë¥×¥í¥°¥é¥à¤òÉ¬Í×¤Ê¤é
+fwhois ¤ò¥¤¥ó¥¹¥È¡¼¥ë¤·¤Ê¤µ¤¤¡£¤¢¤Ê¤¿¤Ï¤Þ¤¿ whois ¤ò¥¤¥ó¥¹¥È¡¼¥ë¤·¤¿¤¤¤Ç
+¤¢¤í¤¦¤¬¡¢¤É¤Á¤é¤Î¥×¥í¥°¥é¥à¤¬¹¥¤Þ¤·¤¤¤«¤Ï¼«Ê¬¤Ç·è¤á¤Ê¤µ¤¤¡£
+
 %description -l pl
 Program fwhois to jedna z wersji programu whois. Zarówno fwhois jak i
 whois kieruj± zapytania do internetowych baz danych whois by otrzymaæ
@@ -33,14 +61,9 @@ Nale¿y zainstalowaæ fwhois je¶li potzrebuje sie programu do kierowania
 zapytañ do baz danych whois. Mo¿na równie¿ zainstalowac whois a potem
 dokonaæ wyboru miêdzy oboma programami.
 
-%description -l de
-Dies ist das 'WHOIS'-Programm. Es gestattet Ihnen, in den
-Whois-Datenbanken rund um die Welt nach Personen zu suchen.
-
-%description -l fr
-Programme « whois ». Il vous permet d'obtenir des informations sur les
-personnes répertoriées dans les bases de données whois de part le
-monde.
+%description -l pt_BR
+Este é o programa "whois". Ele permite achar informações sobre pessoas
+armazenadas nos bancos de dados "whois" do mundo inteiro.
 
 %description -l tr
 whois ile dünyadaki whois veri tabanlarýnda kaydý bulunan kiþiler
@@ -48,6 +71,8 @@ hakkýnda bilgi edinebilirsiniz.
 
 %prep
 %setup -q
+%patch0 -p1
+%patch1 -p1
 
 %build
 %{__cc} %{rpmcflags} %{rpmldflags} fwhois.c -o fwhois
