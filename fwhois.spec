@@ -56,8 +56,8 @@ whois kieruj± zapytania do internetowych baz danych whois by otrzymaæ
 informacje o u¿ytkownikach systemu. Fwhois jest mniejszym programem i
 uruchamia siê w inny sposób.
 
-Nale¿y zainstalowaæ fwhois je¶li potzrebuje sie programu do kierowania
-zapytañ do baz danych whois. Mo¿na równie¿ zainstalowac whois a potem
+Nale¿y zainstalowaæ fwhois je¶li potrzebuje sie programu do kierowania
+zapytañ do baz danych whois. Mo¿na równie¿ zainstalowaæ whois a potem
 dokonaæ wyboru miêdzy oboma programami.
 
 %description -l pt_BR
