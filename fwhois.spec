@@ -1,6 +1,7 @@
 Summary:	A finger-style whois program
 Summary(de):	Finger-artiges whois
 Summary(fr):	Un whois dans le style finger
+Summary(pl):	Program do odpytywania bazy whois podobny w obs³udze do fingera
 Summary(tr):	finger tarzý whois
 Name:		fwhois
 Version:	1.00
