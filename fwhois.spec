@@ -5,10 +5,10 @@ Summary(tr):	finger tarzý whois
 Name:		fwhois
 Version:	1.00
 Release:	13
-Copyright:	BSD
+License:	BSD
 Group:		Applications/Networking
 Group(pl):	Aplikacje/Sieciowe
-Source:		ftp://sunsite.unc.edu/pub/Linux/distributions/slackware/source/n/tcpip/fwhois-1.00.tar.gz
+Source0:	ftp://sunsite.unc.edu/pub/Linux/distributions/slackware/source/n/tcpip/%{name}-%{version}.tar.gz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -17,31 +17,32 @@ fwhois and whois query Internet whois databases to find information
 about system users. Fwhois is smaller and more compact than whois, and
 runs in a different manner.
 
-Install fwhois if you or your system's users need a program for querying
-whois databases. You may also want to install whois, and then decide for
-yourself which program you prefer. 
+Install fwhois if you or your system's users need a program for
+querying whois databases. You may also want to install whois, and then
+decide for yourself which program you prefer.
 
 %description -l pl
-Program fwhois to jedna z wersji programu whois. Zarówno fwhois jak i whois
-kieruj± zapytania do internetowych baz danych whois by otrzymaæ informacje
-o u¿ytkownikach systemu. Fwhois jest mniejszym programem i uruchamia siê w
-inny sposób.
+Program fwhois to jedna z wersji programu whois. Zarówno fwhois jak i
+whois kieruj± zapytania do internetowych baz danych whois by otrzymaæ
+informacje o u¿ytkownikach systemu. Fwhois jest mniejszym programem i
+uruchamia siê w inny sposób.
 
-Nale¿y zainstalowaæ fwhois je¶li potzrebuje sie programu do kierowania zapytañ
-do baz danych whois. Mo¿na równie¿ zainstalowac whois a potem dokonaæ wyboru
-miêdzy oboma programami.
+Nale¿y zainstalowaæ fwhois je¶li potzrebuje sie programu do kierowania
+zapytañ do baz danych whois. Mo¿na równie¿ zainstalowac whois a potem
+dokonaæ wyboru miêdzy oboma programami.
 
 %description -l de
-Dies ist das 'WHOIS'-Programm. Es gestattet Ihnen, in den Whois-Datenbanken
-rund um die Welt nach Personen zu suchen.
+Dies ist das 'WHOIS'-Programm. Es gestattet Ihnen, in den
+Whois-Datenbanken rund um die Welt nach Personen zu suchen.
 
 %description -l fr
 Programme « whois ». Il vous permet d'obtenir des informations sur les
-personnes répertoriées dans les bases de données whois de part le monde.
+personnes répertoriées dans les bases de données whois de part le
+monde.
 
 %description -l tr
-whois ile dünyadaki whois veri tabanlarýnda kaydý bulunan kiþiler hakkýnda
-bilgi edinebilirsiniz.
+whois ile dünyadaki whois veri tabanlarýnda kaydý bulunan kiþiler
+hakkýnda bilgi edinebilirsiniz.
 
 %prep
 %setup -q
