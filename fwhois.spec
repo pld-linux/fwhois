@@ -8,7 +8,7 @@ Summary(pt_BR):	Whois parecido com saída do finger
 Summary(tr):	finger tarzý whois
 Name:		fwhois
 Version:	1.00
-Release:	15
+Release:	16
 License:	BSD
 Group:		Applications/Networking
 Source0:	ftp://sunsite.unc.edu/pub/Linux/distributions/slackware/source/n/tcpip/%{name}-%{version}.tar.gz
