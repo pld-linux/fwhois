@@ -80,7 +80,7 @@ hakkýnda bilgi edinebilirsiniz.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
 
-install fwhois $RPM_BUILD_ROOT/%{_bindir}/fwhois
+install fwhois $RPM_BUILD_ROOT%{_bindir}/fwhois
 
 %clean
 rm -rf $RPM_BUILD_ROOT
