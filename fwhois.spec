@@ -1,12 +1,11 @@
-Summary: A finger-style whois program.
-Name: fwhois
-Version: 1.00
-Release: 11
-Copyright: BSD
-Group: Applications/Internet
-Source: ftp://sunsite.unc.edu/pub/Linux/distributions/slackware/source/n/tcpip/fwhois-1.00.tar.gz
-Prefix: %{_prefix}
-Buildroot: /var/tmp/%{name}-root
+Summary:	A finger-style whois program.
+Name:		fwhois
+Version:	1.00
+Release:	12
+Copyright:	BSD
+Group:		Applications/Internet
+Source:		ftp://sunsite.unc.edu/pub/Linux/distributions/slackware/source/n/tcpip/fwhois-1.00.tar.gz
+Buildroot:	/tmp/%{name}-%{version}-root
 
 %description
 The fwhois program is a different style of the whois program.  Both
@@ -26,15 +25,18 @@ gcc $RPM_OPT_FLAGS -s fwhois.c -o fwhois
 
 %install
 rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT/%{_prefix}/bin
-install -s -m755 fwhois $RPM_BUILD_ROOT/%{_prefix}/bin/fwhois
-ln -sf fwhois $RPM_BUILD_ROOT/%{_prefix}/bin/whois
+install -d $RPM_BUILD_ROOT%{_bindir}
+
+install -s fwhois $RPM_BUILD_ROOT/%{_bindir}/fwhois
+ln -sf fwhois $RPM_BUILD_ROOT/%{_bindir}/whois
+
+gzip -9nf README
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(-,root,root)
-%doc README
-/%{_prefix}/bin/fwhois
-/%{_prefix}/bin/whois
+%defattr(644,root,root,755)
+%doc README.gz
+%attr(755,root,root) %{_bindir}/fwhois
+%attr(755,root,root) %{_bindir}/whois
