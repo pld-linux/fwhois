@@ -12,6 +12,7 @@ Release:	15
 License:	BSD
 Group:		Applications/Networking
 Source0:	ftp://sunsite.unc.edu/pub/Linux/distributions/slackware/source/n/tcpip/%{name}-%{version}.tar.gz
+# Source0-md5:	13648b9ff2aa2deb7910c1a5a4bec931
 Patch0:		%{name}-nicname.patch
 Patch1:		%{name}-crsnic.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
