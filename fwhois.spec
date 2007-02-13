@@ -1,11 +1,11 @@
 Summary:	A finger-style whois program
-Summary(de.UTF-8):   Finger-artiges whois
-Summary(es.UTF-8):   Whois parecido con salida del finger
-Summary(fr.UTF-8):   Un whois dans le style finger
-Summary(ja.UTF-8):   finger スタイルの whois プログラム
-Summary(pl.UTF-8):   Program do odpytywania bazy whois podobny w obsłudze do fingera
-Summary(pt_BR.UTF-8):   Whois parecido com saída do finger
-Summary(tr.UTF-8):   finger tarzı whois
+Summary(de.UTF-8):	Finger-artiges whois
+Summary(es.UTF-8):	Whois parecido con salida del finger
+Summary(fr.UTF-8):	Un whois dans le style finger
+Summary(ja.UTF-8):	finger スタイルの whois プログラム
+Summary(pl.UTF-8):	Program do odpytywania bazy whois podobny w obsłudze do fingera
+Summary(pt_BR.UTF-8):	Whois parecido com saída do finger
+Summary(tr.UTF-8):	finger tarzı whois
 Name:		fwhois
 Version:	1.00
 Release:	16
